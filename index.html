@@ -5,41 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
     <title>PedroMendes - Portfólio</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
+      <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
 
   <body>
-    <img class="image-gradient" src="img/gradient.png" alt="gradient" />
+    <img class="image-gradient" src="./img/gradient.png" alt="gradient" />
     <div class="layer-blur"></div>    <!-- ajuda a criar um efeito brilhante em volta do elemento -->
 
     <div class="container">     <!-- aqui dentro vai ter os elementos do cabeçalho de navegação -->
       <header>      <!-- nosso cabeçalho-->
-        <h1 class="logo">PedroMendes</h1>     <!-- Título do site -->
+        <h1 data-aos="fade-down" data-aos-duration="1500"class="logo">PedroMendes</h1>     <!-- Título do site -->
 
         <nav>     <!-- nossa navegação -->
-          <a href="#">SOBRE</a>
-          <a href="#">PROJETOS</a>
-          <a href="#">HABILIDADES</a>
-          <a href="#">CONTATO</a>
+          <a data-aos="fade-down" data-aos-duration="1500" href="#">SOBRE</a>
+          <a data-aos="fade-down" data-aos-duration="2000" href="#">PROJETOS</a>
+          <a data-aos="fade-down" data-aos-duration="2500" href="#">HABILIDADES</a>
+          <a data-aos="fade-down" data-aos-duration="300" href="#">CONTATO</a>
         </nav>
 
-        <button class="btn-signing">CURRÍCULO</button>  <!-- botão de currículo -->
+        <button data-aos="fade-down" data-aos-duration="1500" class="btn-signing">CURRÍCULO</button>  <!-- botão de currículo -->
       </header>
 
      <main>    <!-- conteúdo principal da página - HTML semântico -->
           <div class="content">
-            <div class="tag-box">
+            <div data-aos="fade-zoom-in"
+           data-aos-easing="ease-in-back"
+           data-aos-delay="300"
+           data-aos-offset="0" data-aos-duration="1500" class="tag-box">
               <div class="tag">BEM-VINDO</div>
-            </div>
+              </div>
 
-            <h1>DESENVOLVEDOR<br>FULL STACK</h1>
+            <h1 data-aos="fade-zoom-in"
+           data-aos-easing="ease-in-back"
+           data-aos-delay="300"
+           data-aos-offset="0" data-aos-duration="2000" >DESENVOLVEDOR<br>FULL STACK</h1>
 
-            <p class="description">
+            <p data-aos="fade-zoom-in"
+           data-aos-easing="ease-in-back"
+           data-aos-delay="300"
+           data-aos-offset="0" data-aos-duration="2500"  class="description">
               transformando ideias em código, criando experiências digitais
               incríveis com tecnologias modernas.
             </p>
 
-            <div class="buttons">
+            <div data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="300"
+            data-aos-offset="0" data-aos-duration="3000"  class="buttons">
               <a href="#" class="btn-get-started">Ver Projetos &gt;</a>
               <a href="#" class="btn-signing-main">Entre em Contato &gt;</a>
 
@@ -47,11 +60,20 @@
           </div>
       </main>
 
-      <spline-viewer class="robot-3d" url="https://prod.spline.design/oCCISRBdw3qSoqrA/scene.splinecode"></spline-viewer>
+      <spline-viewer data-aos="fade-zoom-in"
+           data-aos-easing="ease-in-back"
+           data-aos-delay="300"
+           data-aos-offset="0" data-aos-duration="3000"  class="robot-3d" url="https://prod.spline.design/oCCISRBdw3qSoqrA/scene.splinecode"></spline-viewer>
 
     </div>
 
     <script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.28/build/spline-viewer.js"></script>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
   </body>
 
