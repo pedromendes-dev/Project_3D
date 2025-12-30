@@ -1,0 +1,213 @@
+     /* seletor universal (*) */
+* {
+	margin: 0;      /* remove margens padrão */
+	padding: 0;     /* remove espaçamentos padrão */
+	box-sizing: border-box;    /* inclui bordas e preenchimentos na largura e altura totais dos elementos */
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;     /* define a fonte padrão */
+	background-color: #121212;     /* define a cor de fundo do corpo */
+	color: #e7e7e7;     /* define a cor do texto padrão */
+	height: 100vh;     /* garante que o corpo ocupe pelo menos a altura total da janela de visualização */
+	line-height: 1.5;     /* define o espaçamento entre linhas para melhor legibilidade */
+}
+
+     /* Efeito de gradiente e desfoque no layout */
+
+.image-gradient {
+	position: absolute;       /* posiciona a imagem de gradiente de forma absoluta */
+	top: 0;     /* alinha a imagem ao topo */
+	right: 0;     /* alinha a imagem à direita */
+	opacity: 0.5;     /* define a opacidade da imagem */
+	z-index: -1;       /* coloca a imagem atrás de outros elementos */
+}
+
+.layer-blur {
+	height: 0;    /* define a altura para ocupar toda a altura da janela de visualização */
+	width: 30rem;   /* define a largura do elemento */
+	position: absolute;   /* posiciona o elemento de forma absoluta */
+	top: 20%;     /* posiciona o elemento a 20% do topo */
+	right: 0;     /* alinha o elemento à direita */
+	box-shadow: 0 0 700px 15px white; /* cria um efeito de sombra para o desfoque */
+	rotate: -30deg;     /* rotaciona o elemento em -30 graus (deg = graus (degrees) */
+	z-index: -1;     /* coloca o elemento atrás de outros elementos */
+}
+
+       /* CONTAINER */
+
+.container {
+	width: 100%;     /* define a largura do container para 100% */
+	margin: 0 auto;     /* centraliza o container horizontalmente */
+	padding: 0 2rem;     /* adiciona espaçamento interno ao container */
+	position: relative;     /* define o posicionamento relativo para o container */
+	overflow: hidden;     /* oculta qualquer conteúdo que ultrapasse os limites do container */
+}
+
+     /* HEADER */
+
+header {
+	display: flex;     /* utiliza o modelo de layout flexível */
+	justify-content: space-between;     /* distribui os itens com espaço entre eles */
+	align-items: center;     /* alinha os itens verticalmente ao centro */
+	padding: 1rem 5rem;     /* adiciona espaçamento interno ao header */
+	z-index: 999;     /* garante que o header fique acima de outros elementos */
+}
+
+header h1 {
+	margin: 0;     /* remove a margem padrão do título */
+	font-size: 3rem;     /* define o tamanho da fonte do título */
+	font-weight: 300;     /* define a espessura da fonte do título */
+}
+
+nav {
+	display: flex;     /* utiliza o modelo de layout flexível */
+	align-items: center;     /* alinha os itens verticalmente ao centro */
+	gap: 3rem;     /* adiciona espaçamento entre os itens de navegação */
+	margin-left: -5%;     /* ajusta a margem esquerda para alinhar os itens */
+}
+
+nav a {
+	font-size: 1rem;     /* define o tamanho da fonte dos links de navegação */
+	letter-spacing: 0.1rem;     /* adiciona espaçamento entre as letras */
+	transition: color 0.2s ease;     /* adiciona uma transição suave para a cor */
+	text-decoration: none;     /* remove o sublinhado dos links */
+	color: inherit;     /* herda a cor do elemento pai */
+}
+
+nav a:hover {   /*hover seria quando o mouse passa por cima do link */
+	color: #a7a7a7;     /* altera a cor dos links ao passar o mouse */
+}
+
+.btn-signing {
+	background-color: #a7a7a7;     /* define a cor de fundo do botão */
+	color: black;     /* define a cor do texto do botão */
+	padding: 0.8rem 2rem;     /* adiciona espaçamento interno ao botão */
+	border-radius: 50px;     /* arredonda os cantos do botão */
+	border: none;     /* remove a borda padrão do botão */
+	font-size: 1rem;     /* define o tamanho da fonte do botão */
+	font-weight: 500;     /* define a espessura da fonte do botão */
+	transition: background-color 0.2s ease;     /* adiciona uma transição suave para a cor de fundo */
+	cursor: pointer;     /* altera o cursor para indicar que o botão é clicável */
+}
+
+.btn-signing:hover {
+	background-color: white;     /* altera a cor de fundo do botão ao passar o mouse */
+}
+
+      /* MAIN CONTENT */
+
+main {
+	display: flex;     /* utiliza o modelo de layout flexível */
+	flex-direction: column;     /* organiza os itens em coluna */
+	justify-content: center;     /* centraliza os itens verticalmente */
+	min-height: calc(90vh - 6rem);    /* define a altura mínima do main, subtraindo a altura do header (6rem) da altura total da janela de visualização (90vh) */
+}
+
+.content {
+	max-width: 40rem;     /* define a largura máxima do conteúdo */
+	margin-left: 10%;     /* adiciona margem à esquerda do conteúdo */
+	z-index: 999;     /* garante que o conteúdo fique acima de outros elementos */
+}
+
+.tag-box {
+	position: relative;     /* define o posicionamento relativo para o box */
+	padding: 2px;     /* espaço para criar a borda gradiente */
+	display: inline-block;     /* se adapta ao tamanho do conteúdo */
+	border-radius: 50px;     /* arredonda os cantos do box */
+	background: linear-gradient(to right, #656565, #7f42a7, #6600c5,
+	#5300a0, #757575, #656565);     /* cria um gradiente de cores para o fundo do box */
+	background-size: 200%;    /* define o tamanho do fundo para permitir a animação */
+	animation: animationGradient 2.5s linear infinite;     /* aplica a animação ao box */
+	box-shadow: 0 0 15px rgba(255, 255, 255, 0.33);     /* adiciona uma sombra ao box */
+}
+
+@keyframes animationGradient {
+	to {
+		background-position: 200%;     /* move a posição do fundo para criar o efeito de animação */
+	}
+}
+
+.tag-box .tag {
+	position: relative;     /* posiciona a tag de forma relativa */
+	padding: 0.35rem 1rem;     /* adiciona espaçamento interno para o texto */
+	background-color: black;    /* define a cor de fundo da tag */
+	border-radius: 50px;     /* arredonda os cantos da tag */
+	display: flex;     /* utiliza o modelo de layout flexível */
+	align-items: center;     /* centraliza o conteúdo verticalmente */
+	justify-content: center;     /* centraliza o conteúdo horizontalmente */
+	font-size: 0.75rem;     /* tamanho da fonte */
+	font-weight: 500;     /* peso da fonte */
+	letter-spacing: 0.05rem;     /* espaçamento entre letras */
+	color: #e7e7e7;     /* cor do texto */
+	transition: 0.5s ease;    /* adiciona uma transição suave para a tag */
+	cursor: pointer;    /* altera o cursor para indicar que a tag é clicável */
+}
+
+.tag-box .tag:hover{
+	color: #5300a0;    /* altera a cor do texto da tag ao passar o mouse */
+}
+
+.content h1 {
+	font-size: 4rem;     /* define o tamanho da fonte do título */
+	font-weight: 600;     /* define a espessura da fonte do título */
+	letter-spacing: 0.1em;     /* adiciona espaçamento entre as letras do título */
+	margin: 1.5rem 0 1rem 0;     /* adiciona margem ao título */
+	line-height: 1.2;     /* define o espaçamento entre linhas do título */
+	text-shadow: 0 0 10px rgba(128, 128, 128, 0.418);     /* adiciona uma sombra ao texto do título */
+}
+
+.description {
+   font-size: 1.2rem;     /* define o tamanho da fonte da descrição */
+   letter-spacing: 0.05rem;     /* adiciona espaçamento entre as letras da descrição */
+   max-width: 35rem;     /* define a largura máxima da descrição */
+   color: gray;     /* define a cor do texto da descrição */
+	margin-bottom: 2rem;     /* adiciona margem inferior */
+}
+
+.buttons {
+	display: flex;     /* utiliza o modelo de layout flexível */
+	gap: 1.5rem;     /* adiciona espaçamento entre os botões */
+}
+
+.btn-get-started {
+	text-decoration: none;     /* remove o sublinhado do link */
+	border: 1px solid #2a2a2a;     /* adiciona uma borda ao botão */
+	padding: 0.7rem 1.2rem;     /* adiciona espaçamento interno ao botão */
+	border-radius: 50px;     /* arredonda os cantos do botão */
+	font-size: 1.2rem;     /* define o tamanho da fonte do botão */
+	font-weight: 600;     /* define a espessura da fonte do botão */
+	letter-spacing: 0.1em;     /* adiciona espaçamento entre as letras */
+   transition: background-color 0.2s ease,    /* adiciona uma transição suave para a cor de fundo e a cor do texto */
+}
+
+.btn-get-started:hover {
+   background-color: #1a1a1a;     /* altera a cor de fundo do botão ao passar o mouse */;
+}
+
+.btn-get-started:active {
+	color: inherit;     /* mantém a cor ao clicar */
+	background-color: #1a1a1a;     /* mantém o fundo ao clicar */
+}
+
+.btn-signing-main {
+	text-decoration: none;     /* remove o sublinhado do link */
+	background-color: lightgray;     /* define a cor de fundo do botão */
+	color: black;     /* define a cor do texto do botão */
+	padding: 0.6rem 2.5rem;     /* adiciona espaçamento interno ao botão */
+	border-radius: 50px;     /* arredonda os cantos do botão */
+	font-size: 1.2rem;     /* define o tamanho da fonte do botão */
+	font-weight: 600;     /* define a espessura da fonte do botão */
+	letter-spacing: 0.1em;     /* adiciona espaçamento entre as letras */
+	transition: background-color 0.2s ease;     /* adiciona uma transição suave para a cor de fundo */
+}
+
+.btn-signing-main:hover {
+	background-color: gray;     /* altera a cor de fundo do botão ao passar o mouse */
+}
+
+.robot-3d {
+   position: absolute;
+   top: 0;
+   right: -20%;
+}
