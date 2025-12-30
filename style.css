@@ -14,7 +14,6 @@ body {
 }
 
      /* Efeito de gradiente e desfoque no layout */
-
 .image-gradient {
 	position: absolute;       /* posiciona a imagem de gradiente de forma absoluta */
 	top: 0;     /* alinha a imagem ao topo */
@@ -35,7 +34,6 @@ body {
 }
 
        /* CONTAINER */
-
 .container {
 	width: 100%;     /* define a largura do container para 100% */
 	margin: 0 auto;     /* centraliza o container horizontalmente */
@@ -45,13 +43,11 @@ body {
 }
 
      /* HEADER */
-
 header {
 	display: flex;     /* utiliza o modelo de layout flexível */
 	justify-content: space-between;     /* distribui os itens com espaço entre eles */
 	align-items: center;     /* alinha os itens verticalmente ao centro */
 	padding: 1rem 5rem;     /* adiciona espaçamento interno ao header */
-	z-index: 999;     /* garante que o header fique acima de outros elementos */
 }
 
 header h1 {
@@ -73,6 +69,7 @@ nav a {
 	transition: color 0.2s ease;     /* adiciona uma transição suave para a cor */
 	text-decoration: none;     /* remove o sublinhado dos links */
 	color: inherit;     /* herda a cor do elemento pai */
+   z-index: 999;     /* garante que o header fique acima de outros elementos */
 }
 
 nav a:hover {   /*hover seria quando o mouse passa por cima do link */
@@ -89,6 +86,7 @@ nav a:hover {   /*hover seria quando o mouse passa por cima do link */
 	font-weight: 500;     /* define a espessura da fonte do botão */
 	transition: background-color 0.2s ease;     /* adiciona uma transição suave para a cor de fundo */
 	cursor: pointer;     /* altera o cursor para indicar que o botão é clicável */
+   z-index: 999;     /* garante que o header fique acima de outros elementos */
 }
 
 .btn-signing:hover {
@@ -96,7 +94,6 @@ nav a:hover {   /*hover seria quando o mouse passa por cima do link */
 }
 
       /* MAIN CONTENT */
-
 main {
 	display: flex;     /* utiliza o modelo de layout flexível */
 	flex-direction: column;     /* organiza os itens em coluna */
@@ -210,4 +207,78 @@ main {
    position: absolute;
    top: 0;
    right: -20%;
+}
+
+
+      /* TABLET RESPONSIVE */
+@media (max-width: 1300x) {
+   header{
+      padding: 1rem 0.5rem;
+   }
+
+   .content{
+      margin-top: 85%;
+   }
+
+   .robot-3d {
+      scale: 0.8;
+      top: -20%;
+      right: 2%;
+   }
+}
+
+      /* MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+   header{
+      padding: 1rem 0.1rem;
+   }
+
+   nav{
+      display: none;
+   }
+
+   header h1{
+      font-size: 2.5rem;
+   }
+
+   .btn-signing{
+      padding: 0.6rem 1.5rem ;
+   }
+
+   .content{
+      margin-top: 25rem;
+   }
+
+   .robot-3d {
+      scale: 0.5;
+      top: -25%;
+      right: 0%;
+   }
+
+   .content{
+      max-width: 30rem;
+      margin-left: 10%;
+   }
+
+   .tag-box{
+      width: 12rem;
+   }
+
+   .content h1{
+      font-size: 2.5rem;
+   }
+
+   .description{
+      font-size: 1rem;
+   }
+
+   .btn-get-started{
+      font-size: 0.8rem;
+      padding: 0.5rem 1.2rem;
+   }
+
+   .btn-signing-main{
+      font-size: 0.8rem;
+      padding: 0.8rem 2rem;
+   }
 }
