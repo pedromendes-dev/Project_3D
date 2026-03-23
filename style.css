@@ -1,4 +1,219 @@
-     /* seletor universal (*) */
+	@media (min-width: 1024px) {
+			/* WEB: Botão 'Entre em Contato' bonito e destacado */
+			.btn-signing-main {
+				background-color: #e0e0e0;
+				color: #232323;
+				padding: 1.1rem 3rem;
+				border-radius: 2rem;
+				border: none;
+				font-size: 1.15rem;
+				font-weight: 600;
+				letter-spacing: 0.08em;
+				transition: background 0.2s, color 0.2s;
+				text-decoration: none;
+				box-shadow: 0 2px 12px #0002;
+				display: inline-block;
+				cursor: pointer;
+				margin-top: 1.5rem;
+			}
+			.btn-signing-main:hover {
+				background-color: #d1c4e9;
+				color: #7f42a7;
+			}
+			/* WEB: Modelo 3D mais à direita */
+			.robot-3d {
+				right: 5vw;
+				top: 0;
+				scale: 0.9;
+			}
+		header {
+			gap: 3rem;
+		}
+		.logo {
+			margin-right: 2.5rem;
+			letter-spacing: 0.02em;
+			padding-right: 1.5rem;
+			border-right: 1px solid #3333;
+		}
+		nav {
+			margin-left: 1.5rem;
+		}
+	}
+
+	.contact-box {
+		display: none;
+		position: absolute;
+		top: 120%;
+		left: 0;
+		background: #18181b;
+		border-radius: 1rem;
+		box-shadow: 0 2px 24px #0004;
+		padding: 1rem;
+		z-index: 1000;
+		min-width: 220px;
+		flex-direction: column !important;
+		gap: 0.5rem !important;
+		align-items: stretch !important;
+	}
+	.contact-box.show {
+			display: flex;
+	}
+	.contact-box button {
+		background: #232323;
+		color: #e7e7e7;
+		border: none;
+		border-radius: 2rem;
+		padding: 1rem 1.5rem;
+		font-size: 1.05rem;
+		font-weight: 500;
+		margin-bottom: 0.5rem;
+		cursor: pointer;
+		transition: background 0.2s, color 0.2s;
+		letter-spacing: 0.08em;
+		text-align: left;
+		width: 100%;
+		box-sizing: border-box;
+		display: block;
+		white-space: normal;
+	}
+	.contact-box button:hover {
+		background: #7f42a7;
+		color: #fff;
+	}
+
+	@media (max-width: 767px) {
+		html {
+			font-size: 15px;
+		}
+		header {
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 0.7rem 0.2rem;
+			gap: 0.5rem;
+		}
+		nav {
+			flex-direction: column;
+			gap: 0.5rem;
+			width: 100%;
+			margin-left: 0;
+		}
+		.container {
+			padding: 0 0.2rem;
+		}
+		.content {
+			margin-top: 1rem;
+			padding: 0 0.2rem;
+			max-width: 100vw;
+			margin-left: 0;
+		}
+		.tag-box {
+			width: 100%;
+			min-width: 0;
+		}
+		.robot-3d {
+			scale: 0.4;
+			top: 0;
+			right: 0;
+		}
+		.content h1 {
+			font-size: 2rem;
+		}
+		.description {
+			font-size: 1rem;
+		}
+		.btn-get-started, .btn-signing-main, .btn-signing {
+			font-size: 0.9rem;
+			padding: 0.7rem 1.2rem;
+		}
+	}
+
+	@media (min-width: 768px) and (max-width: 1023px) {
+		html {
+			font-size: 16px;
+		}
+		header {
+			padding: 1.2rem 1.2rem;
+			gap: 1rem;
+		}
+		nav {
+			gap: 1.2rem;
+			margin-left: 0;
+		}
+		.container {
+			padding: 0 1rem;
+		}
+		.content {
+			max-width: 90vw;
+			margin-left: 0;
+			padding: 0 1rem;
+		}
+		.tag-box {
+			width: auto;
+			min-width: 8rem;
+			max-width: 100vw;
+		}
+		.robot-3d {
+			scale: 0.7;
+			right: 0;
+		}
+		.content h1 {
+			font-size: 2.5rem;
+		}
+		.description {
+			font-size: 1.1rem;
+		}
+		.btn-get-started, .btn-signing-main, .btn-signing {
+			font-size: 1rem;
+			padding: 0.8rem 1.5rem;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		html {
+			font-size: 18px;
+		}
+		.container {
+			max-width: 1100px;
+			margin: 0 auto;
+			padding: 0 2.5rem;
+		}
+		header {
+			padding: 2.5rem 2.5rem 2rem 2.5rem;
+			gap: 2.5rem;
+		}
+		nav {
+			gap: 2.5rem;
+			margin-left: 0;
+		}
+		.content {
+			max-width: 700px;
+			margin: 0 auto;
+			padding: 0 2rem;
+		}
+		.tag-box {
+			max-width: 350px;
+		}
+		.description {
+			max-width: 600px;
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 1.2rem;
+		}
+		.buttons {
+			gap: 2.5rem;
+		}
+		.robot-3d {
+			right: -10%;
+			scale: 0.9;
+		}
+		.btn-get-started, .btn-signing-main, .btn-signing {
+			font-size: 1.1rem;
+			padding: 1rem 2.2rem;
+		}
+		.content h1 {
+			font-size: 3.5rem;
+		}
+	}
 * {
 	margin: 0;      /* remove margens padrão */
 	padding: 0;     /* remove espaçamentos padrão */
@@ -13,7 +228,6 @@ body {
 	line-height: 1.5;     /* define o espaçamento entre linhas para melhor legibilidade */
 }
 
-     /* Efeito de gradiente e desfoque no layout */
 .image-gradient {
 	position: absolute;       /* posiciona a imagem de gradiente de forma absoluta */
 	top: 0;     /* alinha a imagem ao topo */
@@ -33,7 +247,6 @@ body {
 	z-index: -1;     /* coloca o elemento atrás de outros elementos */
 }
 
-       /* CONTAINER */
 .container {
 	width: 100%;     /* define a largura do container para 100% */
 	margin: 0 auto;     /* centraliza o container horizontalmente */
@@ -42,12 +255,11 @@ body {
 	overflow: hidden;     /* oculta qualquer conteúdo que ultrapasse os limites do container */
 }
 
-     /* HEADER */
 header {
 	display: flex;     /* utiliza o modelo de layout flexível */
 	justify-content: space-between;     /* distribui os itens com espaço entre eles */
 	align-items: center;     /* alinha os itens verticalmente ao centro */
-	padding: 1rem 5rem;     /* adiciona espaçamento interno ao header */
+	padding: 1rem 2rem;     /* padding lateral menor para evitar corte */
 }
 
 header h1 {
@@ -64,12 +276,37 @@ nav {
 }
 
 nav a {
-	font-size: 1rem;     /* define o tamanho da fonte dos links de navegação */
-	letter-spacing: 0.1rem;     /* adiciona espaçamento entre as letras */
-	transition: color 0.2s ease;     /* adiciona uma transição suave para a cor */
-	text-decoration: none;     /* remove o sublinhado dos links */
-	color: inherit;     /* herda a cor do elemento pai */
-   z-index: 999;     /* garante que o header fique acima de outros elementos */
+	font-size: 1rem;
+	letter-spacing: 0.1rem;
+	transition: color 0.2s ease;
+	text-decoration: none;
+	color: inherit;
+	z-index: 999;
+	text-transform: capitalize;
+
+}
+
+nav a.btn-get-started {
+	background: none !important;
+	color: inherit !important;
+	font-weight: 400 !important;
+	border: none !important;
+	box-shadow: none !important;
+	padding: 0 !important;
+	border-radius: 0 !important;
+	text-transform: capitalize !important;
+
+
+
+nav a.btn-get-started {
+  background: none;
+  color: inherit;
+  font-weight: 400;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+}
 }
 
 nav a:hover {   /*hover seria quando o mouse passa por cima do link */
@@ -86,7 +323,22 @@ nav a:hover {   /*hover seria quando o mouse passa por cima do link */
 	font-weight: 500;     /* define a espessura da fonte do botão */
 	transition: background-color 0.2s ease;     /* adiciona uma transição suave para a cor de fundo */
 	cursor: pointer;     /* altera o cursor para indicar que o botão é clicável */
-   z-index: 999;     /* garante que o header fique acima de outros elementos */
+	 z-index: 999;     /* garante que o header fique acima de outros elementos */
+	 /* Regras padrão para desktop/web */
+	 max-width: 220px;
+	 white-space: nowrap;
+	 overflow: hidden;
+	 text-overflow: ellipsis;
+}
+
+
+/* MOBILE: Ajuste do botão CURRÍCULO para telas pequenas */
+@media (max-width: 767px) {
+	.btn-signing {
+		font-size: 0.95rem;
+		padding: 0.6rem 1.1rem;
+		max-width: 140px;
+	}
 }
 
 .btn-signing:hover {
@@ -187,22 +439,43 @@ main {
 	background-color: #1a1a1a;     /* mantém o fundo ao clicar */
 }
 
-.btn-signing-main {
-	text-decoration: none;     /* remove o sublinhado do link */
-	background-color: lightgray;     /* define a cor de fundo do botão */
-	color: black;     /* define a cor do texto do botão */
-	padding: 0.6rem 2.5rem;     /* adiciona espaçamento interno ao botão */
-	border-radius: 50px;     /* arredonda os cantos do botão */
-	font-size: 1.2rem;     /* define o tamanho da fonte do botão */
-	font-weight: 600;     /* define a espessura da fonte do botão */
-	letter-spacing: 0.1em;     /* adiciona espaçamento entre as letras */
-	transition: background-color 0.2s ease;     /* adiciona uma transição suave para a cor de fundo */
+/* WEB (Desktop) - Botão CURRÍCULO */
+.btn-signing {
+	background-color: #a7a7a7;
+	color: black;
+	padding: 0.8rem 2.2rem;
+	border-radius: 50px;
+	border: none;
+	font-size: 1.08rem;
+	font-weight: 500;
+	transition: background-color 0.2s ease;
+	cursor: pointer;
+	z-index: 999;
+	max-width: 240px;
+	min-width: 120px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	box-shadow: 0 2px 8px #0002;
 }
 
-.btn-signing-main:hover {
-	background-color: gray;     /* altera a cor de fundo do botão ao passar o mouse */
+/* MOBILE - Botão CURRÍCULO */
+@media (max-width: 767px) {
+	.btn-signing {
+		background-color: #fff;
+		color: #232323;
+		padding: 0.6rem 1.1rem;
+		border-radius: 2rem;
+		font-size: 0.97rem;
+		font-weight: 600;
+		max-width: 140px;
+		min-width: 80px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		box-shadow: 0 1px 4px #0001;
+	}
 }
-
 .robot-3d {
    position: absolute;
    top: 0;
@@ -277,8 +550,27 @@ main {
       padding: 0.5rem 1.2rem;
    }
 
-   .btn-signing-main{
-      font-size: 0.8rem;
-      padding: 0.8rem 2rem;
-   }
+/* Botão 'Entre em Contato' estilo original */
+
+/* Botão 'Entre em Contato' estilo botão claro arredondado */
+.btn-signing-main {
+	background-color: #e0e0e0;
+	color: #232323;
+	padding: 0.8rem 2.5rem;
+	border-radius: 2rem;
+	border: none;
+	font-size: 1.1rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	transition: background 0.2s, color 0.2s;
+	text-decoration: none;
+	box-shadow: 0 2px 8px #0002;
+	display: inline-block;
+	cursor: pointer;
 }
+.btn-signing-main:hover {
+	background-color: #d1c4e9;
+	color: #7f42a7;
+}
+}
+
