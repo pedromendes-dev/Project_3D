@@ -1,0 +1,6 @@
+*.html
+*.css
+*.js
+.vscode/
+.history/
+node_modules/
